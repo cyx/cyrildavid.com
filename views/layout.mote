@@ -5,47 +5,9 @@
   <title>{{ title }} | @cyx</title>
 
   <link rel="stylesheet" type="text/css" href="/css/prettify.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
   <link rel="stylesheet/less" type="text/css" href="/less/bootstrap.less">
-  <style type="text/css" media="screen">
-    .topbar .brand img { width: 24px; height: 24px; }
-    .topbar ul li a small { color: #777; font-size: 11px; line-height: 19px; }
 
-    #body-articles .topbar li.articles a { color: #FFF; }
-    #body-screencasts .topbar li.screencasts a { color: #FFF; }
-    #body-projects .topbar li.projects a { color: #FFF; }
-
-    #main { padding-top: 80px; }
-
-    .container .hero-unit {
-      background: none;
-      padding: 0; position:
-      absolute;
-      top: 50%; left: 50%;
-      margin-left: -470px;
-      margin-top: -72px;
-    }
-
-    .container .hero-unit h1 { font-size: 54px; margin-bottom: 18px; }
-
-    .articles article { overflow: hidden; margin: 18px 0; }
-    .articles article h1 { float: left; }
-    .articles article h1 a { color: #333; text-decoration: underline; }
-    .articles article .date-posted {
-      float: left; width: 80px; font-size: 12px; line-height: 36px; color: #DDD;
-    }
-
-    .projects article { margin: 18px 0; }
-    .projects article h1 { margin-bottom: 6px; }
-    .projects article h1 a { color: #333; text-decoration: underline; }
-    .projects article p { margin-left: 20px; }
-
-    .article p { margin: 24px 0; font-size: 18px; line-height: 24px; }
-
-    .article footer { font-size: 12px; color: #DDD; }
-    .article footer .date-posted { font-size: 11px; color: #AAA; }
-    .article footer .tagged-with { font-size: 11px; color: #AAA; }
-
-  </style>
   <script src="/scripts/less.js" type="text/javascript"></script>
   <script src="/scripts/jquery.min.js" type="text/javascript"></script>
   <script src="/scripts/bootstrap-twipsy.js" type="text/javascript"></script>
