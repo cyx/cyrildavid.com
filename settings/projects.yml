@@ -1,0 +1,20 @@
+- :title: Cuba
+  :description: The micro framework for web development
+
+- :title: Cuba-Contrib
+  :description: The little helpful brother of Cuba
+
+- :title: Ohm
+  :description: A very thin object relational mapper for Redis
+
+- :title: Ohm-Contrib
+  :description: Callbacks, data types, and a plethora of useful stuff.
+
+- :title: Shield
+  :description: "Authentication protocol for rack-based apps (key phrase: less is more)"
+
+- :title: Mote
+  :description: Possibly the simplest template parser around.
+
+- :title: Imagery
+  :description: A simple image resizing tool.

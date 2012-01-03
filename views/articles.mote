@@ -1,0 +1,8 @@
+<section class="articles">
+  % articles.each do |article|
+    <article>
+      <span class="date-posted">{{ format_date(article.date) }}</span>
+      <h1><a href="/articles/{{ article.slug }}">{{ article.title }}</a></h1>
+    </article>
+  % end
+</section>

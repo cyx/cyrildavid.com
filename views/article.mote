@@ -1,0 +1,14 @@
+<article class="article">
+  <div class="page-header">
+    <h1>{{ article.title }}</h1>
+  </div>
+
+  {{ article.content }}
+
+  <footer>
+    <span class="date-posted">posted on {{ format_date(article.date) }}</span>
+    |
+
+    <span class="tagged-with">Tagged: {{ taglist(article.tags) }}</span>
+  </footer>
+</article>

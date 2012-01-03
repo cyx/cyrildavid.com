@@ -1,0 +1,7 @@
+<ul class="media-grid">
+  % screencasts.each do |cast|
+    <li>
+      <a href="#"><img src="{{ cast.thumbnail }}"></a>
+    </li>
+  % end
+</ul>

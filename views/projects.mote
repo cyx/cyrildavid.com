@@ -1,0 +1,9 @@
+<section class="projects">
+  % projects.each do |project|
+    <article>
+      <h1><a href="#">{{ project.title }}</a></h1>
+
+      <p>{{ project.description }}</p>
+    </article>
+  % end
+</section>
