@@ -225,7 +225,7 @@ run Hello
 ## Conclusion
 
 The point of all these examples is to simply illustrate the
-power of Rack in and of itself. It might not be easy to
+power of Rack in and of itself. It might be a bit hard to
 read at this point compared to say a Rails app, but it might
 simply be a case of 
 [easy versus familiar](http://www.infoq.com/presentations/Simple-Made-Easy).
