@@ -84,7 +84,7 @@ rackup -D -P rack.pid
 test "$(ruby -r time -e 'puts Time.now.rfc2822')" \
   == "$(curl --silent http://localhost:9292/datetime)" || echo "failed"
 
-test "404 Not Found" 
+test "404 Not Found" \
   == "$(curl --silent http://localhost:9292/missing)" || echo "failed"
 
 kill -9 $(cat rack.pid) && rm rack.pid
@@ -218,4 +218,4 @@ run Hello
 
 The point of all these examples is to simply illustrate the
 power of Rack in and of itself, and to also serve as an eye-opener
-to the power of plain 'ol ruby and it's best library Rack.
+to the power of plain 'ol ruby.
