@@ -14,9 +14,9 @@ Now start hacking away (use your favorite editor in place of vi in case
 you're more comfortable with something else).
 
 <pre class="prettyprint">
-app = lambda { |env|
-  [200, { "Content-Type" => "text/plain", ["Hello World"]]  
-}
+app = lambda do |env|
+  [200, { "Content-Type" => "text/plain" }, ["Hello World"]]
+end
 
 run app
 </pre>
@@ -94,23 +94,31 @@ kill -9 $(cat rack.pid) && rm rack.pid
 
 Now that we've made it work, how about we clean it up a bit.
 
+One of the first things you might notice is that the response tuple
+tends to become cumbersome very quickly.
+
+Thankfully, we can use `Rack::Response` to wrap that up for us.
+
 <pre class="prettyprint">
 class Hello
   def self.call(env)
-    req = Rack::Request.new(env)
-    res = Rack::Response.new
+    req = Rack::Request.new(env)  # provides a ruby-esque interface to the environment
+    res = Rack::Response.new      # allows us assemble the response incrementally.
 
     case req.path
     when "/" 
-      res.write "Hello World"
+      res.write "Hello World"     # We can also use multiple res.write statements.
     when "/datetime"
       res.write Time.now.rfc2822
     else
-      res.status = 404
+      res.status = 404            # We have to explicitly declare the status to be 404
       res.write "404 Not Found"
     end
+  
+    # We explicitly set the Content-Type. It defaults to text/html otherwise.
+    res.headers["Content-Type"] = "text/plain"
 
-    res.finish
+    res.finish                    # This returns the tuple. 200 is the default status
   end
 end
 
@@ -217,5 +225,7 @@ run Hello
 ## Conclusion
 
 The point of all these examples is to simply illustrate the
-power of Rack in and of itself, and to also serve as an eye-opener
-to the power of plain 'ol ruby.
+power of Rack in and of itself. It might not be easy to
+read at this point compared to say a Rails app, but it might
+simply be a case of 
+[easy versus familiar](http://www.infoq.com/presentations/Simple-Made-Easy).
