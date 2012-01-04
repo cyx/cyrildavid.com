@@ -125,7 +125,7 @@ end
 run Hello
 </pre>
 
-## Exercise: build a simple sinatra clone
+## Exercise: build a simple Sinatra clone
 
 Of course we can't build every single feature of Sinatra,
 but we can try to trim down the requirements to only
