@@ -57,7 +57,7 @@ Let's begin with a more complicated, albeit still trivial example.
 - When you go to `/datetime`, you'll see the current date and time.
 
 We can implement that in a couple of different ways. Let's do it using
-our old friend, the `switch` statement.
+our old friend, the `case` statement.
 
 <pre class="prettyprint">
 class Hello
