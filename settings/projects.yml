@@ -1,20 +1,27 @@
 - :title: Cuba
-  :description: The micro framework for web development
+  :description: The micro framework for web development (contributor)
+  :url: "http://github.com/soveran/cuba"
 
 - :title: Cuba-Contrib
-  :description: The little helpful brother of Cuba
+  :description: The little helpful brother of Cuba (author)
+  :url: "http://github.com/cyx/cuba-contrib"
 
 - :title: Ohm
-  :description: A very thin object relational mapper for Redis
+  :description: A very thin object relational mapper for Redis (contributor)
+  :url: "http://github.com/soveran/ohm"
 
 - :title: Ohm-Contrib
-  :description: Callbacks, data types, and a plethora of useful stuff.
+  :description: Callbacks, data types, and a plethora of useful stuff. (author)
+  :url: "http://github.com/cyx/ohm-contrib"
 
 - :title: Shield
-  :description: "Authentication protocol for rack-based apps (key phrase: less is more)"
+  :description: "Authentication protocol for rack-based apps (key phrase: less is more, author)"
+  :url: "http://github.com/cyx/shield"
 
 - :title: Mote
-  :description: Possibly the simplest template parser around.
+  :description: Possibly the simplest template parser around. (contributor)
+  :url: "http://github.com/soveran/mote"
 
 - :title: Imagery
-  :description: A simple image resizing tool.
+  :description: A simple image resizing tool. (author)
+  :url: "http://github.com/cyx/imagery"
