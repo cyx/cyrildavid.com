@@ -22,7 +22,7 @@
 
         <ul class="nav">
           <li class="articles"><a href="/articles">articles</a></li>
-          <li class="screencasts"><a href="/screencasts">screencasts</a></li>
+          %# <li class="screencasts"><a href="/screencasts">screencasts</a></li>
           <li class="projects"><a href="/projects">projects</a></li>
           <li><a href="http://github.com/cyx"><small>github.com/</small>cyx</a></li>
           <li><a href="http://twitter.com/cyx"><small>twitter.com/</small>cyx</a></li>
