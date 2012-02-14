@@ -1,17 +1,21 @@
+- :title: Dep
+  :description: Basic dependency tracking (author).
+  :url: "https://github.com/twpil/dep"
+
 - :title: Cuba
-  :description: The micro framework for web development (contributor)
+  :description: The micro framework for web development (contributor).
   :url: "http://github.com/soveran/cuba"
 
 - :title: Cuba-Contrib
-  :description: The little helpful brother of Cuba (author)
+  :description: The little helpful brother of Cuba (author).
   :url: "http://github.com/cyx/cuba-contrib"
 
 - :title: Ohm
-  :description: A very thin object relational mapper for Redis (contributor)
+  :description: A very thin object relational mapper for Redis (contributor).
   :url: "http://github.com/soveran/ohm"
 
 - :title: Ohm-Contrib
-  :description: Callbacks, data types, and a plethora of useful stuff. (author)
+  :description: Callbacks, data types, and a plethora of useful stuff (author).
   :url: "http://github.com/cyx/ohm-contrib"
 
 - :title: Shield
@@ -19,9 +23,9 @@
   :url: "http://github.com/cyx/shield"
 
 - :title: Mote
-  :description: Possibly the simplest template parser around. (contributor)
+  :description: Possibly the simplest template parser around (contributor).
   :url: "http://github.com/soveran/mote"
 
 - :title: Imagery
-  :description: A simple image resizing tool. (author)
+  :description: A simple image resizing tool (author).
   :url: "http://github.com/cyx/imagery"
