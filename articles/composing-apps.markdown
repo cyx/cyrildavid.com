@@ -39,7 +39,7 @@ the following URL endpoints:
 Now let us pretend that we want to specifically write all 
 of this in one Rack app. How do we go about doing this?
 
-We'll make use of the Rack::Builder method call `map`. 
+We'll make use of the Rack::Builder method called `map`. 
 
 <pre class="prettyprint">
 # config.ru
