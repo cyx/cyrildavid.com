@@ -1,18 +1,23 @@
 - :title: Understanding Rack
   :date: 2012-01-03
   :file: "understanding-rack.markdown"
-  :tags: "cuba, ruby"
+  :tags: "rack, ruby"
+
+- :title: Composing Apps
+  :date: 2012-02-16
+  :file: "composing-apps.markdown"
+  :tags: "rack, ruby"
 
 # - :title: Rack meet Cuba
 #   :date: 2012-01-10
 #   :file: "what-is-cuba.markdown"
 #   :tags: "cuba, ruby"
-# 
+#
 # - :title: "Mote: a template parser in under 20 LOC"
 #   :date: 2012-01-27
 #   :file: "what-is-cuba.markdown"
 #   :tags: "cuba, ruby"
-# 
+#
 # - :title: "Ohm gets transactional"
 #   :date: 2012-02-14
 #   :file: "what-is-cuba.markdown"

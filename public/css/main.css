@@ -37,3 +37,5 @@
 .article footer .tagged-with { font-size: 11px; color: #AAA; }
 
 pre.prettyprint { padding: 12px 20px; }
+
+blockquote { line-height: 1.6 !important; text-indent: 0 !important; }

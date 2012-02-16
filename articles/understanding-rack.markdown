@@ -26,7 +26,7 @@ Rack's protocol is very simple:
 
 1. Your app can be any object that responds to `call`.
 2. Rack passes in the request environment as a hash.
-3. You respond with a tuple consisting of the HTTP status (200 for success), 
+3. You respond with a tuple consisting of the HTTP status (200 for success),
    the headers, and an object responding to `each` (hence the array).
 
 Now that we've finished that, let's quickly test that everything works!
@@ -41,7 +41,7 @@ test "Hello World" == "$(curl --silent http://localhost:9292)" || echo "failed"
 If everything succeeded, you should see nothing. Otherwise you'll see
 the string "failed".
 
-Now let's quickly stop our server, just to be tidy. 
+Now let's quickly stop our server, just to be tidy.
 
 <pre class="prettyprint">
 kill -9 $(cat rack.pid) && rm rack.pid # stop our rackup server
@@ -51,7 +51,7 @@ kill -9 $(cat rack.pid) && rm rack.pid # stop our rackup server
 
 Well, as with most things, it's best to know everything from the ground up.
 
-Let's begin with a more complicated, albeit still trivial example. 
+Let's begin with a more complicated, albeit still trivial example.
 
 - When you go to the homepage (`/`, you'll see hello world)
 - When you go to `/datetime`, you'll see the current date and time.
@@ -63,7 +63,7 @@ our old friend, the `case` statement.
 class Hello
   def self.call(env)
     case env["PATH_INFO"]
-    when "/" 
+    when "/"
       [200, { "Content-Type" => "text/plain" }, ["Hello World"]]
     when "/datetime"
       [200, { "Content-Type" => "text/plain" }, [Time.now.rfc2822]]
@@ -106,7 +106,7 @@ class Hello
     res = Rack::Response.new      # allows us assemble the response incrementally.
 
     case req.path
-    when "/" 
+    when "/"
       res.write "Hello World"     # We can also use multiple res.write statements.
     when "/datetime"
       res.write Time.now.rfc2822
@@ -114,7 +114,7 @@ class Hello
       res.status = 404            # We have to explicitly declare the status to be 404
       res.write "404 Not Found"
     end
-  
+
     # We explicitly set the Content-Type. It defaults to text/html otherwise.
     res.headers["Content-Type"] = "text/plain"
 
@@ -154,27 +154,31 @@ class Frank
   def self.delete(path, &block)
     handlers["DELETE"] << [matcher(path), block]
   end
-  
+
   def self.matcher(path)
     # handle the case where the path has a variable e.g. /post/:id
     re = path.gsub(/\:[^\/]+/, "([^\\/]+)")
 
-    %r{\A#{re}\z}
+    %r{\A#{trim_trailing_slash(re)}\z}
+  end
+
+  def self.trim_trailing_slash(str)
+    str.gsub(/\/$/, "")
   end
 
   def self.handlers
     @handlers ||= Hash.new { |h, k| h[k] = [] }
   end
- 
+
   def self.call(env)
     res = Rack::Response.new
 
     handlers[env["REQUEST_METHOD"]].each do |matcher, block|
-      if match = env["PATH_INFO"].match(matcher)
+      if match = trim_trailing_slash(env["PATH_INFO"]).match(matcher)
         break res.write(block.call(*match.captures))
       end
     end
-  
+
     res.status = 404 if res.empty?
     res.finish
   end
@@ -195,7 +199,7 @@ we can:
 <pre class="prettyprint">
 class Hello < Frank
   get "/" do
-    "Hello World"    
+    "Hello World"
   end
 
   get "/datetime" do
@@ -227,5 +231,12 @@ run Hello
 The point of all these examples is to simply illustrate the
 power of Rack in and of itself. It might be a bit hard to
 read at this point compared to say a Rails app, but it might
-simply be a case of 
+simply be a case of
 [easy versus familiar](http://www.infoq.com/presentations/Simple-Made-Easy).
+
+### UPDATE #1
+
+I've changed Frank a bit by trimming the trailing slashes in order
+for it to play well with rack sub apps. In addition, I added a
+global thread safe request accessor, so the handlers can do
+`request.params` and other clever stuff.

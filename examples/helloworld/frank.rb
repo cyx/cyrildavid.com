@@ -20,18 +20,28 @@ class Frank
     # e.g. /post/:id
     re = path.gsub(/\:[^\/]+/, "([^\\/]+)")
 
-    %r{\A#{re}\z}
+    %r{\A#{trim_trailing_slash(re)}\z}
+  end
+
+  def self.trim_trailing_slash(str)
+    str.gsub(/\/$/, "")
   end
 
   def self.handlers
     @handlers ||= Hash.new { |h, k| h[k] = [] }
   end
 
+  def self.request
+    Thread.current[:request]
+  end
+
   def self.call(env)
     res = Rack::Response.new
 
     handlers[env["REQUEST_METHOD"]].each do |matcher, block|
-      if match = env["PATH_INFO"].match(matcher)
+      if match = trim_trailing_slash(env["PATH_INFO"]).match(matcher)
+        Thread.current[:request] = Rack::Request.new(env)
+
         break res.write(block.call(*match.captures))
       end
     end
