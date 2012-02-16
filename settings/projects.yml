@@ -29,3 +29,11 @@
 - :title: Imagery
   :description: A simple image resizing tool (author).
   :url: "http://github.com/cyx/imagery"
+
+- :title: Ohm Redux
+  :description: A quick spike while trying to think through transactions with @soveran.
+  :url: "http://github.com/cyx/ohm-redux"
+
+- :title: frankrb
+  :description: "A short and sweet demo of building a sinatra-ish clone using rack + ruby."
+  :url: "http://github.com/cyx/frankrb"
