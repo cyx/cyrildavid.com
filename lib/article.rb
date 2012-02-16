@@ -2,6 +2,7 @@ class Article
   include Comparable
 
   attr :title
+  attr :blurb
   attr :date
   attr :file
   attr :data
@@ -9,6 +10,7 @@ class Article
 
   def initialize(atts)
     @title = atts[:title]
+    @blurb = atts[:blurb]
     @date  = atts[:date]
     @tags  = atts[:tags].split(/\s*,\s*/)
     @file  = atts[:file]

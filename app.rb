@@ -58,6 +58,7 @@ Cuba.define do
       Article.all.each do |article|
         m.items.new_item.tap do |i|
           i.title = article.title
+          i.description = article.blurb
           i.link  = "http://cyrildavid.com/articles/#{ article.slug }"
           i.date  = article.date.rfc2822
         end

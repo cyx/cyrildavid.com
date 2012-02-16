@@ -1,4 +1,10 @@
 - :title: Understanding Rack
+  :blurb: |
+    In this short article, I walk through the simplest thing that
+    could possibly work when trying to build a web application,
+    staring with just a simple case, and then progressing into a
+    sinatra-ish clone called Frank.
+
   :date: 2012-01-03
   :file: "understanding-rack.markdown"
   :tags: "rack, ruby"
@@ -7,6 +13,14 @@
   :date: 2012-02-16
   :file: "composing-apps.markdown"
   :tags: "rack, ruby"
+  :blurb: |
+    Modularity is probably one of the most important properties of
+    maintainable software. Quoting from Wikipedia: Modularity
+    is a logical partitioning of the "software design"
+    that allows complex software to be manageable for the purpose
+    of implementation and maintenance. The logic of partitioning
+    may be based on related functions, implementation considerations,
+    data links, or other criteria.
 
 # - :title: Rack meet Cuba
 #   :date: 2012-01-10
