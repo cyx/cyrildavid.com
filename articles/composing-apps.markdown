@@ -70,7 +70,7 @@ need to be aware of:
    `/submit`.
 
 We'll make use of our pet project `Frank` which was discussed in the
-previous article, [Understanding Rack][understanding]
+previous article, [Understanding Rack][understanding].
 
 [understanding]: http://cyrildavid.com/articles/2012/01/03/understanding-rack.
 
