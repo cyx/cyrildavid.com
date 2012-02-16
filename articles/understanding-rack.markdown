@@ -170,11 +170,17 @@ class Frank
     @handlers ||= Hash.new { |h, k| h[k] = [] }
   end
 
+  def self.request
+    Thread.current[:request]
+  end
+
   def self.call(env)
     res = Rack::Response.new
 
     handlers[env["REQUEST_METHOD"]].each do |matcher, block|
       if match = trim_trailing_slash(env["PATH_INFO"]).match(matcher)
+        Thread.current[:request] = Rack::Request.new(env)
+
         break res.write(block.call(*match.captures))
       end
     end
