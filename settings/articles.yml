@@ -22,10 +22,14 @@
     may be based on related functions, implementation considerations,
     data links, or other criteria.
 
-# - :title: Rack meet Cuba
-#   :date: 2012-01-10
-#   :file: "what-is-cuba.markdown"
-#   :tags: "cuba, ruby"
+- :title: Cuba 3.0 Released
+  :date: 2012-03-22
+  :file: "cuba-3.0.markdown"
+  :tags: "cuba, ruby"
+  :blurb: |
+    After 5 months since the release of Cuba 2.2.1, Cuba 3.0 is out
+    with some performance improvements, a minimalistic plugin architecture,
+    and a bunch of other cool additions!
 #
 # - :title: "Mote: a template parser in under 20 LOC"
 #   :date: 2012-01-27
