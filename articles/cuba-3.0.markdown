@@ -40,9 +40,9 @@ features you can optionally tap into:
    `extend`ed into Cuba.
 2. If your module has a `::setup` method, it will be called after included.
 
+An example that uses setup might look like:
 
 <pre class="prettyprint">
-An example that uses setup might look like:
 module Render
   def self.setup(app)
     app.settings[:template_engine] = "erb"
