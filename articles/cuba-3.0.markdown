@@ -63,10 +63,10 @@ talk about next.
 
 We experimented with a few different approaches here, doing a `set` + `get`
 approach for one, but then eventually ended up with a cleaner and more
-sandboxed way of doing settings by simply providing a Hash you can use to
+sandboxed way of doing settings by simply providing a Hash you can use
 for storing some plugin information.
 
-The __main advantage__ was that we __don't pollute__ the class namespace of 
+The __main advantage__ was that we __don't pollute__ the class namespace of
 Cuba with plugin related information.
 
 Using it is the same as using any ordinary hash, and typically is initialized
