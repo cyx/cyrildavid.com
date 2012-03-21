@@ -151,7 +151,7 @@ handling is also supported.
 The main reason we don't require it by default anymore is because
 we've switched to using [mote][mote] for handling the view layer for
 all our projects. Of course, we acknowledge that some might still want to
-use it, so you can simply require it if necessary.
+do it the old way, so you can simply require it if necessary.
 
 [mote]: http://github.com/soveran/mote
 
