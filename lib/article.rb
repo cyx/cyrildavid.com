@@ -38,7 +38,7 @@ class Article
   end
 
   def self.slugged(str)
-    str.downcase.gsub(/[^a-z]/i, "-")
+    str.downcase.gsub(/[^a-z0-9\.]/i, "-")
   end
 
   def self.[](slug)
