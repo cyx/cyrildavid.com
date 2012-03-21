@@ -148,10 +148,12 @@ handling is also supported.
 
 ### III. Tilt is no longer required by default.
 
-Part of the reason we don't require it by default anymore is because
+The main reason we don't require it by default anymore is because
 we've switched to using [mote][mote] for handling the view layer for
 all our projects. Of course, we acknowledge that some might still want to
 use it, so you can simply require it if necessary.
+
+[mote]: http://github.com/soveran/mote
 
 <pre class="prettyprint">
 require "cuba/render"
