@@ -5,12 +5,13 @@ require_relative "lib/project"
 require_relative "lib/screencast"
 require_relative "lib/helpers"
 
-Cuba.plugin Cuba::Helpers
+Cuba.use Rack::Session::Cookie
 
 Cuba.use Rack::Static,
   root: root("public"),
   urls: ["/scripts", "/less", "/css"]
 
+Cuba.plugin Cuba::Helpers
 Cuba.plugin Cuba::Mote
 
 Cuba.define do
