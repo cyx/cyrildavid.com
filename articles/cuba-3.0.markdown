@@ -4,7 +4,7 @@ We've been using Cuba for a little over a year now. It started out as
 an experiment to see how far we can go without Sinatra, and eventually
 grew into a more mature and stable microframework which we use for
 any kind of web application we need to build. A couple of example sites
-built on it include [Redis.io][redis-io], [openredis][openredis], and
+built using it include [Redis.io][redis-io], [openredis][openredis], and
 a ton of other applications I fortunately can't disclose information
 about.
 
@@ -168,4 +168,4 @@ end
 </pre>
 
 And that's about it! If you want to know more simply jump in at __#cuba.rb__
-in freenode.
+on freenode.
