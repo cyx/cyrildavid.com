@@ -5,7 +5,7 @@ an experiment to see how far we can go without Sinatra, and eventually
 grew into a more mature and stable microframework which we use for
 any kind of web application we need to build. A couple of example sites
 built using it include [Redis.io][redis-io], [openredis][openredis], and
-a ton of other applications I fortunately can't disclose information
+a ton of other applications I unfortunately can't disclose information
 about.
 
 While it might seem too lightweight for some, we see it as an advantage
