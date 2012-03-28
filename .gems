@@ -1,4 +1,4 @@
-bluecloth
-cuba
-cuba-contrib
-mote
+bluecloth -v 2.2.0
+cuba -v 3.0.0
+cuba-contrib -v 3.0.0
+mote -v 0.2.2
